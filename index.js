@@ -22,10 +22,7 @@ function setPlayer(player) {
 squares.forEach(square => {
     square.addEventListener('click', () => {
 
-        // if (!square.textContent && currentPlayer) {
-
            if (square.classList.contains('square') && currentPlayer){
-            // square.textContent = currentPlayer === 1 ? 'X' : 'O';
             square.classList.add(currentPlayer === 1 ? 'red-circle' : 'yellow-circle')
             if (determineWinner()) {
                 setTimeout(resetBoard, 3000); 
@@ -34,45 +31,7 @@ squares.forEach(square => {
     });
 });
 
-// Function to determine the winner
-function determineWinner() {
-    const square1 = squares[0].textContent;
-    const square2 = squares[1].textContent;
-    const square3 = squares[2].textContent;
-    const square4 = squares[3].textContent;
-    const square5 = squares[4].textContent;
-    const square6 = squares[5].textContent;
-    const square7 = squares[6].textContent;
-    const square8 = squares[7].textContent;
-    const square9 = squares[8].textContent;
 
-    if (
-        (square1 === 'X' && square2 === 'X' && square3 === 'X') ||
-        (square4 === 'X' && square5 === 'X' && square6 === 'X') ||
-        (square7 === 'X' && square8 === 'X' && square9 === 'X') ||
-        (square1 === 'X' && square4 === 'X' && square7 === 'X') ||
-        (square2 === 'X' && square5 === 'X' && square8 === 'X') ||
-        (square3 === 'X' && square6 === 'X' && square9 === 'X') ||
-        (square1 === 'X' && square5 === 'X' && square9 === 'X') ||
-        (square3 === 'X' && square5 === 'X' && square7 === 'X')
-    ) {
-        result.textContent = 'Player one is the winner!';
-        return true; 
-    } else if (
-        (square1 === 'O' && square2 === 'O' && square3 === 'O') ||
-        (square4 === 'O' && square5 === 'O' && square6 === 'O') ||
-        (square7 === 'O' && square8 === 'O' && square9 === 'O') ||
-        (square1 === 'O' && square4 === 'O' && square7 === 'O') ||
-        (square2 === 'O' && square5 === 'O' && square8 === 'O') ||
-        (square3 === 'O' && square6 === 'O' && square9 === 'O') ||
-        (square1 === 'O' && square5 === 'O' && square9 === 'O') ||
-        (square3 === 'O' && square5 === 'O' && square7 === 'O')
-    ) {
-        result.textContent = 'Player two is the winner!';
-        return true; 
-    }
-    return false; 
-}
 
 // Function to reset the board
 function resetBoard() {

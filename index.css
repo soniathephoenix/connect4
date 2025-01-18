@@ -61,3 +61,7 @@ p {
 .yellow-circle {
     background-color: rgb(236, 207, 62);
 }
+
+#result {
+    color: aquamarine;
+}
