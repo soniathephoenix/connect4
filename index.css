@@ -46,6 +46,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 
@@ -56,12 +57,18 @@ p {
 
 .red-circle {
     background-color: red;
+    
 }
 
 .yellow-circle {
     background-color: rgb(236, 207, 62);
+    
 }
 
 #result {
-    color: aquamarine;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
 }
